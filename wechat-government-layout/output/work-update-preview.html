@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>本周重点工作推进情况 - 微信排版预览</title>
+<style>
+body { margin: 0; background: #eef2f5; color: #1f2933; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+main { max-width: 760px; margin: 0 auto; padding: 24px 16px 48px; }
+.toolbar { display: flex; gap: 12px; align-items: center; margin: 0 0 16px; padding: 12px; background: #ffffff; border: 1px solid #d8e0e7; border-radius: 6px; }
+button { border: 0; border-radius: 4px; padding: 9px 14px; color: #ffffff; background: #1f5b8f; font-size: 14px; cursor: pointer; }
+#copy-status { color: #52616b; font-size: 13px; }
+#preview-shell { overflow: hidden; padding: 24px 16px; background: #ffffff; box-shadow: 0 1px 8px rgba(31, 91, 143, 0.12); }
+</style>
+</head>
+<body>
+<main>
+  <div class="toolbar">
+    <button id="copy-button" type="button">复制可粘贴 HTML</button>
+    <span id="copy-status">复制后可直接粘贴到公众号编辑器。</span>
+  </div>
+  <div id="preview-shell">
+    <div id="wechat-content"><section style="max-width: 677px; margin: 0 auto; padding: 0; color: #333333; background-color: #FFFFFF; word-break: break-word;"><p style="margin: 0 0 22px; padding: 0; color: #1F5B8F; font-size: 24px; font-weight: 700; line-height: 1.45; letter-spacing: 0.5px; text-align: center;"><strong>本周重点工作推进情况</strong></p><p style="margin: 0 0 20px; padding: 10px 12px; color: #4A4A4A; background-color: #F3F7FA; border-left: 3px solid #1F5B8F; font-size: 15px; line-height: 1.75; letter-spacing: 0.2px;">现将本周重点工作进展和下周安排发布如下。</p><p style="margin: 28px 0 14px; padding: 0 0 8px; color: #1F5B8F; border-bottom: 1px solid #C9D8E5; font-size: 18px; font-weight: 700; line-height: 1.5;"><strong>一、本周进展</strong></p><p style="margin: 0 0 16px; padding: 0; color: #333333; font-size: 16px; line-height: 1.75; letter-spacing: 0.3px; text-indent: 2em;">有关单位围绕<span style="padding: 1px 3px; color: #1F5B8F; background-color: #F3F7FA; font-weight: 700;">既定任务清单</span>开展联动推进，重点事项按计划取得<span style="padding: 1px 3px; color: #1F5B8F; background-color: #F3F7FA; font-weight: 700;">阶段性进展</span>。</p><table style="width: 100%; margin: 18px 0; border-collapse: collapse; border: 1px solid #C9D8E5;"><tbody><tr><td style="padding: 10px 12px; color: #333333; background-color: #F3F7FA; border: 1px solid #C9D8E5; font-size: 14px; font-weight: 700; line-height: 1.6; vertical-align: top;">已完成事项</td><td style="padding: 10px 12px; color: #1F5B8F; border: 1px solid #C9D8E5; font-size: 16px; font-weight: 700; line-height: 1.6; vertical-align: top;"><strong>按清单动态更新</strong></td></tr><tr><td style="padding: 10px 12px; color: #333333; background-color: #F3F7FA; border: 1px solid #C9D8E5; font-size: 14px; font-weight: 700; line-height: 1.6; vertical-align: top;">需协同事项</td><td style="padding: 10px 12px; color: #1F5B8F; border: 1px solid #C9D8E5; font-size: 16px; font-weight: 700; line-height: 1.6; vertical-align: top;"><strong>由牵头单位持续跟进</strong><p style="margin: 8px 0 0; padding: 0; color: #666666; font-size: 13px; line-height: 1.6;">以专题会议明确的责任分工为准</p></td></tr></tbody></table><p style="margin: 28px 0 14px; padding: 0 0 8px; color: #1F5B8F; border-bottom: 1px solid #C9D8E5; font-size: 18px; font-weight: 700; line-height: 1.5;"><strong>二、下周安排</strong></p><p style="margin: 18px 0; padding: 12px 14px; color: #333333; background-color: #F3F7FA; border-left: 3px solid #1F5B8F; font-size: 16px; font-weight: 700; line-height: 1.75; letter-spacing: 0.3px;">请各责任单位及时报送工作进展，确保任务衔接顺畅、信息准确。</p><p style="margin: 32px 0 0; padding: 14px 0 0; color: #666666; border-top: 1px solid #C9D8E5; font-size: 13px; line-height: 1.8; letter-spacing: 0.1px;"><span style="color: #333333; font-weight: 700;">来源：</span>某市人民政府办公室<span style="margin: 0 6px; color: #C9D8E5;">|</span><span style="color: #333333; font-weight: 700;">责编：</span>综合信息处<span style="margin: 0 6px; color: #C9D8E5;">|</span><span style="color: #333333; font-weight: 700;">发布日期：</span>2026-10-26</p></section></div>
+  </div>
+</main>
+<script>
+(function () {
+  var button = document.getElementById("copy-button");
+  var status = document.getElementById("copy-status");
+  var article = document.getElementById("wechat-content");
+  function fallbackCopy() {
+    var range = document.createRange();
+    range.selectNodeContents(article);
+    var selection = window.getSelection();
+    selection.removeAllRanges();
+    selection.addRange(range);
+    var copied = document.execCommand("copy");
+    selection.removeAllRanges();
+    return copied;
+  }
+  button.addEventListener("click", async function () {
+    try {
+      var source = article.innerHTML;
+      if (window.ClipboardItem && navigator.clipboard && window.isSecureContext) {
+        var item = new ClipboardItem({
+          "text/html": new Blob([source], { type: "text/html" }),
+          "text/plain": new Blob([article.innerText], { type: "text/plain" })
+        });
+        await navigator.clipboard.write([item]);
+      } else if (!fallbackCopy()) {
+        throw new Error("浏览器不允许复制");
+      }
+      status.textContent = "已复制 HTML；请粘贴到公众号测试图文并保存后复查。";
+    } catch (error) {
+      status.textContent = "自动复制失败，请手动选中正文区域复制。";
+    }
+  });
+}());
+</script>
+</body>
+</html>

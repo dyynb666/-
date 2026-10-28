@@ -1,0 +1,40 @@
+{
+  "name": "government-clean",
+  "layout": {
+    "max_width": "677px",
+    "body_font_size": "16px",
+    "body_line_height": "1.75",
+    "body_color": "#333333",
+    "main_color": "#8C1D18",
+    "muted_color": "#666666",
+    "light_color": "#FBF7F1",
+    "border_color": "#E0C9A6"
+  },
+  "styles": {
+    "root": "max-width: 677px; margin: 0 auto; padding: 0; color: #332C27; background-color: #FFFFFF; word-break: break-word;",
+    "title": "margin: 0 0 22px; padding: 0; color: #8C1D18; font-size: 24px; font-weight: 700; line-height: 1.45; letter-spacing: 0.5px; text-align: center;",
+    "summary": "margin: 0 0 20px; padding: 10px 12px; color: #4A4038; background-color: #FBF7F1; border-left: 3px solid #B8860B; font-size: 15px; line-height: 1.75; letter-spacing: 0.2px;",
+    "heading": "margin: 28px 0 14px; padding: 0 0 8px; color: #8C1D18; border-bottom: 1px solid #E0C9A6; font-size: 18px; font-weight: 700; line-height: 1.5;",
+    "paragraph": "margin: 0 0 16px; padding: 0; color: #333333; font-size: 16px; line-height: 1.75; letter-spacing: 0.3px; text-indent: 2em;",
+    "highlight": "margin: 18px 0; padding: 12px 14px; color: #332C27; background-color: #FBF7F1; border-left: 3px solid #B8860B; font-size: 16px; font-weight: 700; line-height: 1.75; letter-spacing: 0.3px;",
+    "inline_highlight": "padding: 1px 3px; color: #8C1D18; background-color: #FBF7F1; font-weight: 700;",
+    "quote": "margin: 20px 0; padding: 12px 14px; color: #4A4038; background-color: #FFFDF9; border-left: 3px solid #8C1D18; font-size: 15px; line-height: 1.75; letter-spacing: 0.2px;",
+    "quote_source": "margin: 8px 0 0; padding: 0; color: #666666; font-size: 13px; line-height: 1.6; text-align: right;",
+    "data_table": "width: 100%; margin: 18px 0; border-collapse: collapse; border: 1px solid #E0C9A6;",
+    "data_label": "padding: 10px 12px; color: #332C27; background-color: #FBF7F1; border: 1px solid #E0C9A6; font-size: 14px; font-weight: 700; line-height: 1.6; vertical-align: top;",
+    "data_value": "padding: 10px 12px; color: #8C1D18; border: 1px solid #E0C9A6; font-size: 16px; font-weight: 700; line-height: 1.6; vertical-align: top;",
+    "data_note": "margin: 8px 0 0; padding: 0; color: #666666; font-size: 13px; line-height: 1.6;",
+    "image": "display: block; width: 100%; max-width: 100%; height: auto; margin: 20px 0 8px;",
+    "image_placeholder": "margin: 20px 0 8px; padding: 12px 14px; color: #666666; background-color: #FFFDF9; border: 1px dashed #E0C9A6; font-size: 14px; line-height: 1.7; text-align: center;",
+    "image_caption": "margin: 0 0 20px; padding: 0; color: #666666; font-size: 13px; line-height: 1.6; text-align: center;",
+    "footer": "margin: 32px 0 0; padding: 14px 0 0; color: #666666; border-top: 1px solid #E0C9A6; font-size: 13px; line-height: 1.8; letter-spacing: 0.1px;",
+    "footer_label": "color: #333333; font-weight: 700;",
+    "footer_separator": "margin: 0 6px; color: #E0C9A6;"
+  },
+  "validation": {
+    "allowed_tags": ["section", "p", "span", "strong", "b", "em", "br", "blockquote", "table", "tbody", "tr", "td", "img"],
+    "allowed_attributes": ["style", "src", "alt"],
+    "allowed_style_properties": ["background-color", "border", "border-bottom", "border-collapse", "border-left", "border-top", "color", "display", "font-size", "font-weight", "height", "letter-spacing", "line-height", "margin", "max-width", "padding", "text-align", "text-indent", "vertical-align", "width", "word-break"],
+    "forbidden_fragments": ["<style", "<script", "class=", " id=", "onclick=", "onload=", "javascript:", "var(--", "@media", "animation", "position:"]
+  }
+}
